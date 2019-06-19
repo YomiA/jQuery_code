@@ -26,6 +26,25 @@
             // alert("text:"+text);
             $(".p2").append(text);
         });
+        $(".btn4").click(function () {
+            var x=999;
+            var y=100;
+            var rand = parseInt(Math.random()*(x-y)+y);
+            // alert("rand:"+rand);
+            $(".p1").prepend("<p>这是添加的另一段文本"+rand+"</p>");
+        });
+        $(".btn5").click(function () {
+            var x=999;
+            var y=100;
+            var rand = parseInt(Math.random()*(x-y)+y);
+            // alert("rand:"+rand);
+            $(".ul_name").prepend("<li>小苏"+rand+"</li>");
+        });
+        $(".btn6").click(function () {
+            var text = $(".ipt").val();
+            // alert("text:"+text);
+            $(".p2").prepend(text);
+        });
     });
 </script>
 <style>
@@ -45,9 +64,16 @@
             <li>小方</li>
         </ul>
     </div>
-    <input class="ipt" type="text" placeholder="请输入内容" />
+    内容:<input class="ipt" type="text" placeholder="请输入内容" />
+    <br>
+    <br>
     <button class="btn">点击添加一个文本</button>
     <button class="btn2">点击添加一个列表</button>
     <button class="btn3">点击添加输入的内容</button>
+    <br>
+    <br>
+    <button class="btn4">点击添加一个文本</button>
+    <button class="btn5">点击添加一个列表</button>
+    <button class="btn6">点击添加输入的内容</button>
 </body>
 </html>
