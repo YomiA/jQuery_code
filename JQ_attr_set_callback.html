@@ -13,13 +13,39 @@
                     "title":"message"
                 });
             });
+            $(".btn2").click(function () {
+                $(".msg2").attr("href",function(i,origValue) {
+                    return origValue+"s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=yiya&rsv_pq=d3f3eff80003e5dc&rsv_t=5ed5W6zWGrOoKbunnSOlKtq9SJxkfWCVXyZZCaTU2wkLBefcFRH36aaJZxE&rqlang=cn&rsv_enter=1&rsv_sug3=5&rsv_sug1=4&rsv_sug7=100&rsv_sug2=0&inputT=672&rsv_sug4=2394";
+                });
+            });
+            $(".btn3").click(function () {
+                $(".msg3").text("百度百科欢迎您！");
+                $(".dv2 a").attr("href",function (i,origValue) {
+                    alert("i="+i+",origValue="+origValue);
+                    return "https://baike.baidu.com/";
+                });
+            });
         });
     </script>
 </head>
 <body>
     <div>
-        <a class="msg" href="http://www.baidu.com">百度一下，你就知道</a>
+        <a class="msg" href="http://www.baidu.com/">百度一下，你就知道</a>
+        <br>
+        <br>
+        <a class="msg2" href="http://www.baidu.com/">百度一下，你就知道</a>
+        <br>
+        <br>
+        <div class="dv2">
+            <a class="msg3" title="message3"  href="http://www.baidu.com/">百度一下，你就知道</a>
+        </div>
     </div>
     <button class="btn">点击</button>
+    <br>
+    <br>
+    <button class="btn2">点击2</button>
+    <br>
+    <br>
+    <button class="btn3">点击3</button>
 </body>
 </html>
