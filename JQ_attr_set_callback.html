@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQ_attr设置属性和回调函数</title>
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".btn").click(function () {
+                $(".msg").text("今天又是美好的一天");
+                $(".msg").attr({
+                    "href":"http://dnf.qq.com",
+                    "title":"message"
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <a class="msg" href="http://www.baidu.com">百度一下，你就知道</a>
+    </div>
+    <button class="btn">点击</button>
+</body>
+</html>
