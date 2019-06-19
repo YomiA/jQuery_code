@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQ的val()和attr()</title>
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".link").click(function () {
+                if ($(".uname").val() == "" || $(".pwd").val() == ""){
+                    alert("请输入用户名和密码");
+                } else {
+                    $(".link").attr("href","http://www.baidu.com");
+                }
+            });
+            $(".btn").click(function () {
+                alert("获取的值是："+$(".uname").val());
+            });
+            $(".btn2").click(function () {
+                alert("获取的密码是："+$(".pwd").val());
+            });
+            $(".btn3").click(function () {
+                alert("获取的属性值是："+$(".reg").attr("href"));
+            });
+            $(".btn4").click(function () {
+                var rand = parseInt(Math.random()*10);
+               $(".uname").val("小明"+rand+"号");
+            });
+            $(".btn5").click(function () {
+                var x = 1000;
+                var y = 100;
+                var rand = parseInt(Math.random()*(x-y)+y);
+                alert("rand="+rand);
+                $(".pwd").val(rand);
+            })
+        });
+    </script>
+</head>
+<style>
+    .link,.reg{
+        padding: 5px 30px;
+        border: 1px solid #000;
+        text-decoration: none;
+        color: #000;
+    }
+
+</style>
+<body>
+    <p>用户名:<input type="text" class="uname" placeholder="请输入用户名"></p>
+    <p>密  码:<input type="password" class="pwd" placeholder="请输入密码"></p>
+    <a class="link" target="_blank">登 陆</a>
+    <a href="http://www.mazurekphotography.com" class="reg" target="_blank">注 册</a>
+    <br>
+    <br>
+    <button class="btn">点击获取用户输入的用户名</button>
+    <button class="btn2">点击获取用户输入的密码</button>
+    <button class="btn3">点击获取用户登陆的链接</button>
+    <button class="btn4">设置用户名</button>
+    <button class="btn5">设置密码</button>
+</body>
+</html>

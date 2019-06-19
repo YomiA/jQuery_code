@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fade渐入渐出</title>
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+</head>
+<style>
+    .div1{
+        height: 100px;
+        width: 100px;
+        background: red;
+    }
+    .div2{
+        height: 100px;
+        width: 100px;
+        background: violet;
+        display: none;
+    }
+    .div3{
+        height: 100px;
+        width: 100px;
+        background: blue;
+        color: #fff;
+    }
+    .div4{
+        height: 100px;
+        width: 100px;
+        background: green;
+        color: #fff;
+    }
+</style>
+<body>
+    <div class="div1">我是第一个方块</div>
+    <div class="div2">我是第二个方块</div>
+    <div class="div3">我是第三个方块</div>
+    <div class="div4">我是第四个方块</div>
+    <button class="btn1">点击我，让第一个方块慢慢消失</button>
+    <button class="btn2">点击我，让第二个方块慢慢出现</button>
+    <button class="btn3">点击我，让第三个方块慢慢消失，再次点击我让第三个方块慢慢出现</button>
+    <button class="btn4">点击我，让第二个方块慢慢出现的时候，背景颜色发生变化</button>
+    <button class="btn5">点击我，让第四个方块背景颜色变浅</button>
+    <script>
+        $(document).ready(function () {
+            $(".btn1").click(function () {
+                $(".div1").fadeOut(5000)
+            })
+            $(".btn2").click(function () {
+                $(".div2").fadeIn(5000)
+            })
+            $(".btn3").click(function () {
+                $(".div3").fadeToggle(3000)
+            })
+            $(".btn4").click(function () {
+                $(".div2").fadeToggle(3000,function () {
+                    $(".div2").css("background","yellow");
+                })
+            })
+            $(".btn5").click(function () {
+                $(".div4").fadeTo(3000,0.5)
+            })
+        })
+    </script>
+</body>
+</html>

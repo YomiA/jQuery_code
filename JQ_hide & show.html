@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show and Hide</title>
+</head>
+<script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+<body>
+    <p>这是一个段落</p>
+    <p id="p1">这是一个带有id的段落</p>
+    <p class="p2">这是一个带有类名的段落</p>
+    <p class="p2">这也是一个带有跟上面一样的类名的段落</p>
+    <p class="p3" style="width: 250px;height: 250px;border: 1px solid #000000;">
+        我是一个正方形
+    </p>
+    <button class="btn">我想让带有p的都消失</button>
+    <button class="btn2">有我在你别想所有p都消失</button>
+    <button class="btn3">我想让带有id的p消失</button>
+    <button class="btn4">我想让带有类名的p2消失</button><br /><br />
+    <button class="btn5">我想让那个正方形慢慢(3S)的消失</button>
+    <button class="btn6">我想让那个正方形慢慢(5S)的出现</button>
+    <button class="btn7">点击我你想让正方形出现就出现，消失就消失</button>
+</body>
+<script>
+    $(document).ready(function () {
+        $(".btn").click(function () {
+            $("p").hide();
+        })
+        $(".btn2").click(function () {
+            $("p").show();
+        })
+        $(".btn3").click(function () {
+            $("#p1").hide();
+        })
+        $(".btn4").click(function () {
+            $(".p2").hide();
+        })
+        $(".btn5").click(function () {
+            $(".p3").hide(3000);
+        })
+        $(".btn6").click(function () {
+            $(".p3").show(5000);
+        })
+        $(".btn7").click(function () {
+            $(".p3").toggle(1000);
+        })
+    })
+</script>
+</html>

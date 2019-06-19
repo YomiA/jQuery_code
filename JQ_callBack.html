@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQ callBack</title>
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".btn").click(function () {
+                $(".dv").slideDown("5000",function () {
+                    $(".dv").css({"background":"blue","color":"yellow"});
+                });
+            });
+            $(".btn2").click(function () {
+                $(".dv2").slideDown("5000");
+                $(".dv2").css({"background":"blue","color":"yellow"});
+            })
+        })
+    </script>
+</head>
+<style>
+    .dv,.dv2{
+        height: 150px;
+        width: 150px;
+        background: black;
+        display: none;
+    }
+</style>
+<body>
+    <div class="dv">动作停止后才显示函数的效果</div>
+    <br />
+    <br />
+    <div class="dv2">动作还没开始就显示效果</div>
+    <button class="btn">这是有回调函数的</button>
+    <button class="btn2">这是没有回调函数的</button>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQ Slide</title>
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+</head>
+<style>
+    .p1{
+        display: none;
+    }
+    .slid{
+        height: 150px;
+        width: 200px;
+        border: 1px solid #000000;
+        display: none;
+    }
+
+    .slid2{
+        height: 150px;
+        width: 200px;
+        border: 1px solid #000000;
+    }
+
+    .slid3{
+        height: 150px;
+        width: 200px;
+        border: 1px solid #000000;
+    }
+    .slid4{
+        height: 150px;
+        width: 200px;
+        border: 1px solid #000000;
+        background: aqua;
+    }
+</style>
+<body>
+    <p class="p1">第一个方块
+    <div class="slid"></div>
+    </p>
+    <p class="p2">第二个方块</p>
+    <div class="slid2"></div>
+    <p class="p3">第三个方块</p>
+    <div class="slid3"></div>
+    <p class="p4">第四个方块</p>
+    <div class="slid4"></div>
+    <button id="btn">点击我让第一个方块慢慢下拉显示出来</button>
+    <br />
+    <button id="btn2">点击我让第二个方块慢慢缩回去</button>
+    <br />
+    <button id="btn3">点击我让第三个方块消失，然后又出现</button>
+    <br />
+    <button id="btn4">点击我让第三个方块消失，然后又出现</button>
+</body>
+<script>
+    $(document).ready(function () {
+        $("#btn").click(function () {
+            $(".p1").slideDown("slow");
+            $(".slid").slideDown("slow");
+        });
+        $("#btn2").click(function () {
+            $(".p2").slideUp("3000");
+            $(".slid2").slideUp("5000");
+        });
+        $("#btn3").click(function () {
+            $(".p3").slideToggle("5000");
+            $(".slid3").slideToggle("3000")
+        });
+        $("#btn4").click(function () {
+            $(".p4").slideToggle("30000");
+            $(".slid4").slideToggle("3000",function () {
+                $(".slid4").css("background","#fff000");
+            });
+        });
+    });
+</script>
+</html>

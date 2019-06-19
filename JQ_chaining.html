@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chaining允许我们在一条语句中运行多个 jQuery 方法(在相同的元素上)</title>
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".btn").click(function () {
+                $(".div").slideUp().animate({left:"200px"}).slideDown();
+            })
+        })
+    </script>
+</head>
+<style>
+    .div{
+        width: 200px;
+        height: 200px;
+        background: blue;
+        position: relative;
+        opacity: 0.5;
+    }
+</style>
+<body>
+    <div class="div"></div>
+    <button class="btn">点我</button>
+</body>
+</html>

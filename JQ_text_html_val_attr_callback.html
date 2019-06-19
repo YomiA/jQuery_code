@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>text_html_val_attr回调函数</title>
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".btn").click(function () {
+                $(".p1").text(function (i,origText) {
+                    return "旧文本:"+origText+"新文本:Hello world!index("+i+")";
+                });
+            });
+            $(".btn2").click(function () {
+                $(".p2").html(function (i,origText) {
+                    return "旧文本："+origText+"新文本:<b>Hello</b> <i>World</i>! index("+i+")";
+                });
+            });
+        })
+    </script>
+</head>
+<body>
+    <p class="p1">这是一个有<b>粗体</b>的字体。</p>
+    <p class="p2">这是一段有<b>粗体</b>和<i>斜体</i>的字体。</p>
+    <button class="btn">显示新/旧text</button>
+    <button class="btn2">显示新/旧html</button>
+</body>
+</html>

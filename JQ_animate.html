@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQ_animate</title>
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+<!--    语法：$(selector).animate({params},speed,callback);-->
+</head>
+<style>
+    .dv{
+        width: 100px;
+        height: 100px;
+        background: aqua;
+        position: relative;
+    }
+    .dv2{
+        width: 80px;
+        height: 80px;
+        background: violet;
+        position: relative;
+    }
+    .dv3{
+        width: 80px;
+        height: 80px;
+        opacity: 0.1;
+        background:black;
+        position: relative;
+    }
+    .dv4{
+          width: 80px;
+          height: 80px;
+          opacity: 1;
+          background:blue;
+          position: relative;
+      }
+    .dv5{
+        width: 80px;
+        height: 80px;
+        opacity: 1;
+        font-size: 10px;
+        background:yellow;
+        position: relative;
+    }
+</style>
+<body>
+    <div class="dv">
+        第一个方块
+    </div>
+    <div class="dv2">
+        第二个方块
+    </div>
+    <div class="dv3">
+        第三个方块
+    </div>
+    <div class="dv4">
+        第四个方块
+    </div>
+    <div class="dv5">
+        第五个方块
+    </div>
+    <button class="btn">点击我让第一方块向左移动250个像素</button>
+    <br />
+    <br />
+    <button class="btn2">点击我让第二方块向左移动250个像素并背景颜色，长和宽改变</button>
+    <br />
+    <br />
+    <button class="btn3">点击我一次就让第三方块长加5像素，宽加5像素，一直点一直加</button>
+    <br />
+    <br />
+    <button class="btn4">点击我一次就让第四方块消失，再点一次就出来</button>
+    <br />
+    <br />
+    <button class="btn5">点击我就让第五个方块宽度加20px，然后高度加20px，然后宽度减50px，高度减50px，透明度也会变化，里面的字体变大</button>
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".btn").click(function () {
+            $(".dv").animate({left:'250px'});
+        });
+        $(".btn2").click(function () {
+            $(".dv2").animate({left:'250px',height:'120px',width:'120px'},function () {
+                $(".dv2").css('background','#00ff00');
+            });
+        });
+        $(".btn3").click(function () {
+            $(".dv3").animate({
+                left:'250px',
+                height:'+=5px',
+                width:'+=5px',
+                opacity:'+=0.1'
+            })
+        });
+        $(".btn4").click(function () {
+            $(".dv4").animate({
+                height:"toggle"
+            });
+        });
+        $(".btn5").click(function () {
+            var dv = $(".dv5");
+            dv.animate({height:'100px',opacity:'0.3'});
+            dv.animate({width:'100px',opacity:'0.5'},"slow");
+            dv.animate({height:'50px',opacity:'0.8'});
+            dv.animate({width:'50px',opacity:'1'},"slow");
+            dv.animate({fontSize:'15px'});
+        })
+
+    })
+</script>
+</html>

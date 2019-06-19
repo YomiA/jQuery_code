@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Test</title>
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<style>
+    .icon::before{
+        content: "\2192";
+    }
+    .fas fa-user::after{
+    }
+    .up::after{
+        content: "\25B2";
+    }
+    ul,li{
+        list-style: none;
+    }
+    .ul_1{
+        display:none;
+        padding: 0;
+        margin: 0;
+    }
+</style>
+<body>
+    <script>
+        $(document).ready(function () {
+            $(".btn").click(function () {
+                if (!$(".up").hasClass("fa-rotate-180")) {
+                    $(".up").addClass("fa-rotate-180");
+                    $(".ul_1").show();
+                }else{
+                    $(".up").removeClass("fa-rotate-180");
+                    $(".ul_1").hide();
+                }
+            })
+        })
+    </script>
+    <p>
+        点击我，看看有什么反应没有！
+    </p>
+    <div id="app">
+        <a>点击我，看看是什么反应！</a>
+        <i class="icon"></i>
+        <i class="icon2">&#8592</i>
+        <i class="fas fa-user"></i>
+        <i class="fas fa-spin">+</i>
+        <i class="icon-Rjdaoico">&#xecc9;</i>
+        <i class="icon-0001">sdasda</i>
+        <br/>
+        <button class="btn"><i class="fas up"></i></button>
+        <ul class="ul_1">
+            <li>小洪</li>
+            <li>小亮</li>
+            <li>小红</li>
+            <li>小明</li>
+            <li>小白</li>
+            <li>小刚</li>
+            <li>小景</li>
+            <li>小林</li>
+        </ul>
+    </div>
+</body>
+</html>

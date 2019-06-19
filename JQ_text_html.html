@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQ的text()和html()的区别</title>
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".btn").click(function () {
+                var p1 = $(".p1").text();
+                alert("text():"+p1);
+            });
+            $(".btn2").click(function () {
+                var p2 = $(".p1").html();
+                alert("html():"+p2);
+            });
+            $(".btn3").click(function () {
+                $(".p2").text("Hello World!");
+            });
+            $(".btn4").click(function () {
+                $(".p3").html("<b>Hello</b><i>World!</i>");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="dv">
+        <p class="p1">这是带有<strong>粗体</strong>和<i>斜体</i>的文本</p>
+        <p class="p2">这是text设置之前的文本</p>
+        <p class="p3">这是html设置之前的文本</p>
+        <button class="btn">点击显示text()的效果</button>
+        <button class="btn2">点击显示html()的效果</button>
+        <button class="btn3">设置文本text</button>
+        <button class="btn4">设置文本html</button>
+    </div>
+</body>
+</html>
