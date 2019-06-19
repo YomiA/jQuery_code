@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQ追加元素</title>
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+</head>
+<script>
+    $(document).ready(function () {
+        $(".btn").click(function () {
+            var x=999;
+            var y=100;
+            var rand = parseInt(Math.random()*(x-y)+y);
+            // alert("rand:"+rand);
+            $(".p1").append("<p>这是添加的另一段文本"+rand+"</p>");
+        });
+        $(".btn2").click(function () {
+            var x=999;
+            var y=100;
+            var rand = parseInt(Math.random()*(x-y)+y);
+            // alert("rand:"+rand);
+            $(".ul_name").append("<li>小苏"+rand+"</li>");
+        });
+        $(".btn3").click(function () {
+            var text = $(".ipt").val();
+            // alert("text:"+text);
+            $(".p2").append(text);
+        });
+    });
+</script>
+<style>
+    ul,li{
+        list-style: none;
+    }
+</style>
+<body>
+    <div>
+        <p class="p1">这是一段文本append</p>
+        <p class="p2">这是原本的内容</p>
+        <ul class="ul_name">
+            <li>名字列表</li>
+            <li>小明</li>
+            <li>小亮</li>
+            <li>小红</li>
+            <li>小方</li>
+        </ul>
+    </div>
+    <input class="ipt" type="text" placeholder="请输入内容" />
+    <button class="btn">点击添加一个文本</button>
+    <button class="btn2">点击添加一个列表</button>
+    <button class="btn3">点击添加输入的内容</button>
+</body>
+</html>
