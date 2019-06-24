@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="741138cb-ee3c-412f-adfa-a90f12bbdd3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JQ_append_prepend.html" beforeDir="false" afterPath="$PROJECT_DIR$/JQ_append_prepend.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,17 +37,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JQ_attr_set_callback.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
+            <state relative-caret-position="207">
               <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JQ_append_prepend.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="50" column="67" selection-start-line="50" selection-start-column="67" selection-end-line="50" selection-end-column="67" />
+            <state relative-caret-position="729">
+              <caret line="87" column="8" lean-forward="true" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/JQ_after_before.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -102,6 +110,7 @@
         <option value="$PROJECT_DIR$/JQ_text_html_val_attr_callback.html" />
         <option value="$PROJECT_DIR$/JQ_attr_set_callback.html" />
         <option value="$PROJECT_DIR$/JQ_append_prepend.html" />
+        <option value="$PROJECT_DIR$/JQ_after_before.html" />
       </list>
     </option>
   </component>
@@ -185,7 +194,7 @@
       <workItem from="1560413222566" duration="4388000" />
       <workItem from="1560500421847" duration="4196000" />
       <workItem from="1560908967407" duration="12703000" />
-      <workItem from="1561360897697" duration="1559000" />
+      <workItem from="1561360897697" duration="4955000" />
     </task>
     <task id="LOCAL-00001" summary="commit Message Test">
       <created>1560914142787</created>
@@ -222,11 +231,25 @@
       <option name="project" value="LOCAL" />
       <updated>1560937251438</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="commit Message Test2">
+      <created>1561362505898</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1561362505898</updated>
+    </task>
+    <task id="LOCAL-00007" summary="commit Message Test1">
+      <created>1561363082909</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1561363082909</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59183000" />
+    <option name="totallyTimeSpent" value="62579000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -270,7 +293,8 @@
     <MESSAGE value="commit Message Test" />
     <MESSAGE value="commit Message Test3" />
     <MESSAGE value="commit Message Test2" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit Message Test2" />
+    <MESSAGE value="commit Message Test1" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit Message Test1" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -359,13 +383,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JQ_attr_set_callback.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JQ_slide.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1224">
@@ -380,10 +397,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/JQ_attr_set_callback.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/JQ_append_prepend.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="50" column="67" selection-start-line="50" selection-start-column="67" selection-end-line="50" selection-end-column="67" />
+        <state relative-caret-position="729">
+          <caret line="87" column="8" lean-forward="true" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JQ_after_before.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
         </state>
       </provider>
     </entry>
