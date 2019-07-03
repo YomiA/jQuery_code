@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQ里面的各种宽和高</title>
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".btn").click(function () {
+                var txt = $(".dv");
+                txt.text("div的宽度是："+txt.width()
+                    +",div的高度是："+txt.height()
+                    +",div的内边框的宽度是：" +txt.innerWidth()
+                    +",div的内边框的高度是："+txt.innerHeight()
+                    +",div的内边框+border的宽度是："+txt.outerWidth()
+                    +",div的内边框+border的高度是："+txt.outerHeight()
+                );
+            })
+        })
+    </script>
+</head>
+<style type="text/css">
+    .dv{
+        width: 300px;
+        height: 300px;
+        border: 5px solid aqua;
+        padding: 5px 10px;
+        margin: 3px 6px;
+        background: lightblue;
+    }
+</style>
+<body>
+    <div class="dv">
+
+    </div>
+    <button class="btn">点击获取各种不同的宽和高</button>
+</body>
+</html>
