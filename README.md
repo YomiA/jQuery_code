@@ -7,3 +7,5 @@ https://pan.baidu.com/s/1x5imJ2bKcbtlMr1o8OUXNw
 7pyf 
 https://www.npmjs.com/package/hotcss
 https://codepen.io/enxaneta/details/adLPwv
+http://www.ybao.org/book/gulp/820.html
+https://ke.qq.com/course/279809?taid=1923127441638657
