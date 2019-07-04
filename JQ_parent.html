@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery的parent()方法</title>
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+    <script>
+        // parent()返回的是上一个父元素
+        $(document).ready(function () {
+            $("span").parent().css({"color":"red","border":"2px solid red"});
+        })
+    </script>
+</head>
+<style>
+    .ancestors *{
+        display: block;
+        border: 2px solid #000000;
+        color: #000;
+        padding: 5px;
+        margin: 15px;
+    }
+</style>
+<body>
+<div class="ancestors">
+    <div class="parentID">div曾祖父元素
+        <ul>ul祖父元素
+            <li>li父元素
+                <span>
+                    span元素
+                </span>
+            </li>
+        </ul>
+    </div>
+    <div>div祖父元素
+        <p>p父元素
+            <span>span元素</span>
+        </p>
+    </div>
+</div>
+</body>
+</html>

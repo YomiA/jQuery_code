@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery</title>
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("li").eq(2).css("color","red");
+            $("li").filter(".bottom").css("color","blue");
+            $("li").find("span").css({"color":"green","text-decoration":"underline"});
+            $("li").slice(0,2).addClass("sle");
+        })
+    </script>
+</head>
+<style>
+    .sle{
+        color: violet;
+    }
+</style>
+<body>
+    <ul>
+        <li class="top">list-item-1</li>
+        <li class="top">list-item-2</li>
+        <li class="middle">list-item-3</li>
+        <li class="middle"><span>list-item-4</span></li>
+        <li class="top"><span>list-item-5</span></li>
+        <li class="bottom">list-item-6</li>
+        <li class="bottom"><span>list-item-7</span></li>
+        <li class="top">list-item-8</li>
+    </ul>
+</body>
+</html>
