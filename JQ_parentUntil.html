@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery的parentUntil()方法</title>
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+    <script>
+        // parentUntil()方法是找到span和div之间的父级以上的元素
+        $(document).ready(function () {
+            $("span").parentsUntil("div").css({"color":"red","border":"2px solid red"});
+        })
+    </script>
+    <style type="text/css">
+        .ancestors *{
+            display: block;
+            border: 2px solid aqua;
+            color: aqua;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body  class="ancestors">body曾曾祖父
+    <div>div曾祖父
+        <ul>ul祖父
+            <li>li父元素
+                <span>span元素</span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

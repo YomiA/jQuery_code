@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery的children()方法</title>
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("div").children().css({"color":"red","border":"2px solid red"});
+            $("li").children("p.p1").css({"color":"blue","border":"2px solid blue"});
+        })
+    </script>
+    <style>
+        .ancestors *{
+            display: block;
+            border: 2px solid aqua;
+            color: aqua;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body class="ancestors">
+    <div>div元素
+        <ul>ul元素(div的儿子)
+            <li>li元素(div的孙子)
+                <p class="p1">p元素(div的曾孙)
+                    <span>
+                        span元素(div的曾曾孙)
+                    </span>
+                </p>
+                <p class="p2">p元素(div的曾孙)
+                    <span>
+                        span元素(div的曾曾孙)
+                    </span>
+                </p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
