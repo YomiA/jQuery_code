@@ -44,7 +44,16 @@
             var text = $(".ipt").val();
             // alert("text:"+text);
             $(".p2").prepend(text);
+
         });
+        $(".btn7").click(function () {
+            var txt1 = "<p><b>文本1</b></p>";        //使用标签来创建文本
+            var txt2 = $("<p></p>").text("文本2");   //使用jQuery来创建文本
+            var txt3 = document.createElement("p"); //使用DOM的语言来创建文本
+            txt3.innerHTML="文本3";
+            alert("txt1="+txt1+",txt2="+txt2+",txt3="+txt3);
+            $(".p3").append(txt1,txt2,txt3);
+        })
     });
 </script>
 <style>
@@ -56,6 +65,7 @@
     <div>
         <p class="p1">这是一段文本append</p>
         <p class="p2">这是原本的内容</p>
+        <p class="p3">这是一个段落</p>
         <ul class="ul_name">
             <li>名字列表</li>
             <li>小明</li>
@@ -75,5 +85,8 @@
     <button class="btn4">点击添加一个文本</button>
     <button class="btn5">点击添加一个列表</button>
     <button class="btn6">点击添加输入的内容</button>
+    <br>
+    <br>
+    <button class="btn7">点击添加内容</button>
 </body>
 </html>

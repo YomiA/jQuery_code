@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQ的删除元素</title>
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".btn1").click(function () {
+                $(".dv").empty();
+            });
+            $(".btn2").click(function () {
+                $("p").remove();
+            });
+            $(".btn3").click(function () {
+                $("div").remove(".a1");
+            });
+            $(".btn4").click(function () {
+                $("div").remove(".dv2");
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="dv" style="width: 300px;height: 150px;background: aqua;">
+        <a href="http://dnf.qq.com">今天又是充满希望的一天</a>
+        <p class="p1">风会指引你前进的方向！</p>
+        <p class="p2">欢迎来到中央公园！</p>
+    </div>
+    <div class="dv2" style="width: 150px;height: 75px;background: yellow;">
+        <a href="#" class="a1">你好啊，勇士！</a>
+        <a href="#" class="a2">你怎么还没有宠物啊！</a>
+    </div>
+    <button class="btn1">empty点击删除的是指定的元素包含的子元素</button>
+    <button class="btn2">remove点击删除的是指定的类名的元素</button>
+    <button class="btn3">remove点击删除的是指定的元素</button>
+<!--    指定的元素必须是同级的，不能父元素指定子元素-->
+    <button class="btn4">remove点击删除的是指定的元素</button>
+
+</body>
+</html>

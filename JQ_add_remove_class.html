@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>addClass & removeClass</title>
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".btn").click(function () {
+               $("a").addClass("a1 hvr");
+               $("p").addClass("p2");
+               $("p").removeClass("p1");
+            });
+            $(".btn2").click(function () {
+                $("p").toggleClass("green");
+            })
+        })
+    </script>
+    <style>
+        a{
+            list-style: none;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .a1{
+            list-style: none;
+            text-decoration: underline;
+            color: #000;
+        }
+
+        .hvr:hover{
+            color: blue;
+            text-decoration: underline;
+        }
+
+        .p1{
+            color: red;
+            font-size: 16px;
+        }
+
+        .p2{
+            color: violet;
+            font-family: "Arabic Typesetting";
+            font-size: 20px;
+        }
+
+        .green{
+            color: green;
+            text-decoration: underline;
+            border: 1px dotted blue;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="dv">
+        <a href="http://www.baidu.com" target="_blank">百度一下，你就知道</a>
+        <p class="p1">这只是一个文本</p>
+        <p>这是另一个文本</p>
+        <p class="green">这是第三个文本</p>
+    </div>
+    <button class="btn">点击我</button>
+    <button class="btn2">点击我</button>
+</body>
+</html>

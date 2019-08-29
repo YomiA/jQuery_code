@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQ的parents()方法</title>
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+    <script>
+        // parents()指的是只要是上级元素都有影响
+        $(document).ready(function () {
+            $("span").parents().css({"color":"red","border":"2px solid red"});
+        })
+    </script>
+</head>
+<style>
+    .parentID *{
+        display: block;
+        width: 500px;
+        border: 2px solid aqua;
+        color: black;
+        padding: 5px;
+        margin: 15px;
+    }
+</style>
+<body class="parentID">
+    <div>div曾曾祖父
+        <div>div曾祖父
+            <ul>ul曾祖父
+                <li>li祖父
+                    <p>p父元素
+                        <span>
+                            span元素
+                        </span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
