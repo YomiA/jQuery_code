@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+    <script type="text/javascript">
+        // $.noConflict();
+        jQuery(document).ready(function () {
+            jQuery(".btn").click(function () {
+                alert("这是$符号变成jQuery");
+                jQuery(".p1").text("这是$符号变成jQuery");
+            });
+        });
+        var jq = $.noConflict();
+        jq(document).ready(function () {
+            jq(".btn2").click(function () {
+                alert("这是给$重新定义一个名字叫jq");
+                jq(".p2").text("这是给$重新定义一个名字叫jq");
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="context">
+        <p class="p1">这是一段文字</p>
+        <p class="p2">这是另一段文字</p>
+        <button class="btn">点击我</button>
+        <button class="btn2">点击我</button>
+    </div>
+</body>
+</html>

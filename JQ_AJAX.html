@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQ里面的AJAX是跟数据库交互的，它在不重载全部页面的情况下，实现了对部分网页的更新</title>
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".btn").click(function () {
+                $(".p1").load("D:/tools/jQuery_code/TXT file/test.txt");
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div>
+        <p class="p1">AJAX是跟数据库数据的交互</p>
+        <button class="btn">点击得到外部数据</button>
+    </div>
+</body>
+</html>

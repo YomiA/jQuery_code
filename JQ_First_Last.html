@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQ的First和Last遍历</title>
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+</head>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("div p").first().css("border","1px solid #000");
+        $("div p").last().css({'border':'1px solid red','color':'blue'});
+    })
+</script>
+<body>
+    <h1>这是JQ的同级遍历First和Last</h1>
+    <div>
+        <p>这是First遍历</p>
+        <div>
+            <p>First遍历是指返回被选元素的首个元素</p>
+        </div>
+    </div>
+    <div>
+        <p>这是Last遍历</p>
+        <div>
+            <p>Last遍历是指返回被选元素的最后一个元素</p>
+        </div>
+    </div>
+    <p>这就是First和Last遍历的结果</p>
+</body>
+</html>
